@@ -32,11 +32,11 @@ class Account {
         return accountNumber == accNo && pin.equals(enteredPin);
     }
 
-    // DEPOSIT METHOD
+
     public void deposit(double amount) {
         BigDecimal depositAmount = BigDecimal.valueOf(amount);
 
-        // compareTo > 0 checks if depositAmount > 0
+       
         if (depositAmount.compareTo(BigDecimal.ZERO) > 0) {
             balance = balance.add(depositAmount);
             System.out.println("Deposit Successful.");
@@ -45,20 +45,20 @@ class Account {
         }
     }
 
-    // WITHDRAW METHOD
+  
     public void withdraw(float amount) {
         BigDecimal withdrawAmount = new BigDecimal(Float.toString(amount));
 
-        // Validation 1: Check if amount is less than or equal to zero
+ 
         if (withdrawAmount.compareTo(BigDecimal.ZERO) <= 0) {
             System.out.println("Invalid withdrawal amount.");
         } 
-        // Validation 2: Check if balance >= withdrawAmount using compareTo()
+      
         else if (balance.compareTo(withdrawAmount) >= 0) {
             balance = balance.subtract(withdrawAmount);
             System.out.println("Withdrawal Successful.");
         } 
-        // Validation 3: Not enough balance
+
         else {
             System.out.println("Insufficient Balance.");
         }
