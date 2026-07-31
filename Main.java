@@ -28,7 +28,7 @@ class Account {
     }
 
     public boolean login(int accNo, String enteredPin) {
-        // Primitive == comparison for int, equals() for String
+    
         return accountNumber == accNo && pin.equals(enteredPin);
     }
 
