@@ -27,7 +27,7 @@ class Account {
         return accountNumber;
     }
 
-    public boolean login(int accNo, String enteredPin) ;{
+    public boolean login(int accNo, String enteredPin) {
         return accountNumber == accNo && pin.equals(enteredPin);
     }
 
